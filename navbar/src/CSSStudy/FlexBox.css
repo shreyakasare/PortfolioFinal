@@ -6,7 +6,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-size: cover;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 * {
@@ -27,13 +27,13 @@ body {
 }
 .collapsible {
   max-width: 450px;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-weight: 500;
 }
 
 .collapsibleabs {
   max-width: 450px;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-weight: 500;
 }
 
@@ -103,7 +103,7 @@ body {
 
 .collapsible-text {
   max-height: 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 4px;
   line-height: 1.4;
   position: relative;
@@ -114,7 +114,7 @@ body {
 
 .collapsibleabs-text {
   max-height: 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 4px;
   line-height: 1.4;
   position: relative;
@@ -262,7 +262,7 @@ body {
 
 .collapsiblee {
   max-width: 450px;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-weight: 500;
 }
 
