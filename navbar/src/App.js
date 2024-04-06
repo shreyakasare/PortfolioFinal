@@ -39,18 +39,61 @@ import FirstReactApp from "./ReactUdemy/Steps/FirstReactApp";
 import TimeCounter from "./ReactUdemy/Steps/TimeCounter";
 import ListApp from "./ReactUdemy/Travel/ComponentsT/ListApp";
 import FlashCards from "./ReactUdemy/FCards/FlashCards";
-import Acc from "./ReactUdemy/Accordian/Acc";
+import Acc from "./ReactUdemy/Accordion/Acc";
 import Fundamentals1 from "./JScript/Fundamentals1";
 import CarouselComp from "./components/CarouselComp";
-import FilterRecord from "./FilterRecord";
 
 function App() {
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      // <Route path='/' element={<Navbar />} >
+      <Route path="/" element={<RootLayout />}>
+        <Route element={<PrivateComponent />}>
+          <Route index path="/frstApp" element={<FirstReactApp />} />
+          <Route index path="/timeCntr" element={<TimeCounter />} />
+          <Route index path="/fd1" element={<Fundamentals1 />}></Route>
+          <Route index path="/listApp" element={<ListApp />} />
+          <Route index path="/flCards" element={<FlashCards />} />
+          <Route index path="/acc" element={<Acc />} />
+          <Route index path="/about" element={<About />} />
+          <Route path="/cntxt" element={<Context />} />
+          <Route path="/mern" element={<MERN />} />
+          <Route path="/hikeCalc" element={<HikeCalculator />} />
+          <Route path="product" element={<Product />} />
+          <Route path="/add" element={<AddProduct />} />
+          <Route path="/update/:id" element={<UpdateProduct />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="posts" element={<Posts />} />
+          <Route path="todos" element={<Todos />} />
+          <Route path="tablePagination" element={<AppTable />} />
 
+          <Route path="rudemy" element={<DemoScript />} />
+          <Route path="usedash" element={<UsersDashboard />} />
+          <Route path="cssstudy" element={<FlexBox />} />
+          <Route path="watermarkremoval" element={<WaterMarkRemoval />} />
+          <Route path="pizzaProject" element={<Pizza />} />
+          <Route path="login" element={<Login />} />
+          <Route path="loginauth" element={<LoginAuth />} />
+          <Route path="prime" element={<Prime />} />
+          <Route path="fil" element={<Filter />} />
+
+          <Route path="second" element={<Second />} />
+          <Route path="productList" element={<ProductList />} />
+          <Route path="jscript" element={<Arr />} />
+
+        </Route>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/loginm" element={<LoginM />} />
+      </Route>
+    )
+  );
   return (
     <>
       <div className="App">
-        <FilterRecord />
+        <RouterProvider router={router} />
+        {/* <CarouselComp /> */}
       </div>
     </>
   );

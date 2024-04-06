@@ -11,14 +11,35 @@ import logo from "../../Assets/logo.png";
 
 const jscriptData = [
     {
-        label: 'JavaScript Udemy',
+        label: "Accordion", url: "/acc",
+    },
+    {
+        label: "Tutorials",
         submenu: [
             {
-                label: "Fundamentals1",
-                url: "/fd1"
-            }
-        ]
-    }
+                label: "React",
+                url: "/react",
+                submenu: [
+                    {
+                        label: "Hooks",
+                        url: "/react/hooks",
+                    },
+                    {
+                        label: "Context",
+                        url: "/react/context",
+                    },
+                ],
+            },
+            {
+                label: "JavaScript",
+                url: "/javascript",
+            },
+        ],
+    },
+    {
+        label: "Time Counter",
+        url: "/timeCntr",
+    },
 ];
 
 const navBarData = [
@@ -61,7 +82,7 @@ const navBarData = [
         url: "/flCards",
     },
     {
-        label: "Accordian",
+        label: "Accordion",
         url: "/acc",
     },
 ];
@@ -76,12 +97,10 @@ const NavBarPanel = () => {
                 if (item.submenu) {
                     return (
                         <NavDropdown
-                            title={
-                                item.label}
+                            title={item.label}
                             key={index}
                             className='dropdown-menu-dark  
-                        dropend'
-                        >
+                        dropend'>
                             {jscriptShow(item.submenu)}
                         </NavDropdown>
                     );
@@ -153,11 +172,6 @@ const NavBarPanel = () => {
 
                         <NavDropdown title="React Udemy" id="navbarScrollingDropdown">
                             {menuShow(navBarData)}
-                            {/* <NavDropdown.Item href="todos">
-                                <Nav.Link to='todos' as={Link}>
-                                </Nav.Link>
-                            </NavDropdown.Item> */}
-
                         </NavDropdown>
 
                         {/* Drop down */}
@@ -192,17 +206,8 @@ const NavBarPanel = () => {
                             </NavDropdown.Item>
 
                             <NavDropdown title="React Udemy" id="navbarScrollingDropdown">
-
-                                {/* <NavDropdown.Item href="todos">
-                                <Nav.Link to='todos' as={Link}>
-                                </Nav.Link>
-                            </NavDropdown.Item> */}
-
-                            </NavDropdown>
-
-                            <NavDropdown.Item title="JavaScript" id="navbarScrollingDropdown" href="jscript">
                                 {jscriptShow(jscriptData)}
-                            </NavDropdown.Item>
+                            </NavDropdown>
 
                             <NavDropdown.Item href="mern">
                                 <Nav.Link to='mern' as={Link}>
