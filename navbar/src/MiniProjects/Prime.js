@@ -56,41 +56,44 @@ const Prime = () => {
 
     return (
         <>
-            <h5>Prime</h5>
-            <label>
-                From:
-                <input
-                    className="inputBoxL"
-                    type="number"
-                    value={from}
-                    ref={fromRef}
-                    onChange={(e) => setFrom(e.target.value)}
-                />
-            </label>
-            <br />
-            <label>
-                To:
-                <input
-                    className="inputBoxL"
-                    type="number"
-                    value={to}
-                    ref={toRef}
+            <div className='accordionp'>
+                <div className="item">
+                    <h5 className="mh5">Prime</h5>
+                    <input
+                        className="inputBoxL"
+                        type="number"
+                        placeholder="From"
+                        value={from}
+                        ref={fromRef}
+                        onChange={(e) => setFrom(e.target.value)}
+                    />
 
-                    onChange={(e) => setTo(e.target.value)}
-                />
-            </label>
-            <br />
-            <button
-                className="btnLogin"
-                onClick={displayPrime}>
-                Prime Number
-            </button>
-            <div className="row">{dispPrime}</div>
-            <button
-                onClick={resetState}
-                className="btnLogin">
-                Reset
-            </button>
+                    <br />
+                    <label>
+                        To:
+                        <input
+                            className="inputBoxL"
+                            type="number"
+                            value={to}
+                            ref={toRef}
+
+                            onChange={(e) => setTo(e.target.value)}
+                        />
+                    </label>
+                    <br />
+                    <button
+                        className="btnLogin"
+                        onClick={displayPrime}>
+                        Prime Number
+                    </button>
+                    <div className="row">{dispPrime}</div>
+                    <button
+                        onClick={resetState}
+                        className="btnLogin">
+                        Reset
+                    </button>
+                </div>
+            </div >
         </>
     );
 };

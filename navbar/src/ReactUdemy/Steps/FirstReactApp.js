@@ -22,6 +22,27 @@ const FirstReactApp = () => {
             setStep((s) => s + 1);
         }
     }
+
+    function Button({ textColor, bgColor, onClick, text, children }) {
+        debugger
+        return (
+            <button
+                style={{ backgroundColor: bgColor, color: textColor }}
+                onClick={onClick}>
+                {children}
+            </button>
+        )
+    }
+
+    function StepMessage({ step, children }) {
+        return (
+            <div className="message">
+                <h6>Step {step}</h6>
+                {children}
+            </div>
+        )
+    }
+
     return (
         <>
             <button className="close" onClick={() => setIsOpen((is) => !is)}>
@@ -35,23 +56,23 @@ const FirstReactApp = () => {
                         <div className={`${step >= 3 ? "active" : ""}`}>3</div>
                     </div>
 
-                    <p className="message">
-                        Step {step}: {messages[step - 1]}
-                    </p>
+                    <StepMessage step={step}>
+                        {messages[step - 1]}
+                    </StepMessage>
 
                     <div className="buttons">
-                        <button
-                            style={{ backgroundColor: "#7950f2", color: "#fff" }}
-                            onClick={handlePrevious}
-                        >
-                            Previous
-                        </button>
-                        <button
-                            style={{ backgroundColor: "#7950f2", color: "#fff" }}
-                            onClick={handleNext}
-                        >
-                            Next
-                        </button>
+                        <Button
+                            textColor='#fff'
+                            bgColor='#7950f2'
+                            onClick={handlePrevious}>
+                            <span>Previous</span>
+                        </Button>
+                        <Button
+                            textColor='#fff'
+                            bgColor='#7950f2'
+                            onClick={handleNext}>
+                            <span>Next</span>
+                        </Button>
                     </div>
                 </div>
             )}

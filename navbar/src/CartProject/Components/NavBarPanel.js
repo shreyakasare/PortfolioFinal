@@ -47,7 +47,7 @@ const navBarData = [
         label: "Steps", url: "/frstApp",
     },
     {
-        label: "Tutorials",
+        label: "Projects",
         submenu: [
             {
                 label: "React",
@@ -61,6 +61,14 @@ const navBarData = [
                         label: "Context",
                         url: "/react/context",
                     },
+                    {
+                        label: "TipCal",
+                        url: "/tipCal",
+                    },
+                    {
+                        label: "SplitBills",
+                        url: "/spBill"
+                    }
                 ],
             },
             {

@@ -1,47 +1,48 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import "./App.css";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
-import About from "./pages/About";
-import Login from "./pages/Login";
-import HikeCalculator from "./pages/HikeCalculator";
-import Context from "./pages/ContextAPI/Context";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Product from "./CartProject/Components/Product";
+import "./App.css";
 import Cart from "./CartProject/Components/Cart";
 import Dashboard from "./CartProject/Components/Dashboard";
+import Product from "./CartProject/Components/Product";
 import RootLayout from "./CartProject/Components/RootLayout";
-import Todos from "./Todos";
-import UsersDashboard from "./useContext Hook/UsersDashboard";
-import FlexBox from "./CSSStudy/FlexBox";
-import WaterMarkRemoval from "./pages/RapidAPI/WaterMarkRemoval";
-import LoginAuth from "./pages/LoginAuth";
-import Posts from "./pages/Posts";
-import MERN from "./MERN";
-import SignUp from "./components/SignUp";
-import PrivateComponent from "./components/PrivateComponent";
-import LoginM from "./components/LoginM";
-import Prime from "./MiniProjects/Prime";
 import AddProduct from "./components/AddProduct";
-import DemoScript from "./ReactUdemy/02-JS-REVIEW/DemoScript";
+import LoginM from "./components/LoginM";
+import PrivateComponent from "./components/PrivateComponent";
+import ProductList from "./components/ProductList";
+import SignUp from "./components/SignUp";
+import UpdateProduct from "./components/UpdateProduct";
+import FlexBox from "./CSSStudy/FlexBox";
+import Arr from "./JScript/Arr";
+import Fundamentals1 from "./JScript/Fundamentals1";
+import MERN from "./MERN";
 import Filter from "./MiniProjects/Filter";
 import Second from "./MiniProjects/FrontEnd Mentor/Second";
-import ProductList from "./components/ProductList";
-import Arr from "./JScript/Arr";
-import UpdateProduct from "./components/UpdateProduct";
+import Prime from "./MiniProjects/Prime";
 import AppTable from "./MiniProjects/Table/AppTable";
+import About from "./pages/About";
+import Context from "./pages/ContextAPI/Context";
+import HikeCalculator from "./pages/HikeCalculator";
+import Login from "./pages/Login";
+import LoginAuth from "./pages/LoginAuth";
+import Posts from "./pages/Posts";
+import WaterMarkRemoval from "./pages/RapidAPI/WaterMarkRemoval";
+import DemoScript from "./ReactUdemy/02-JS-REVIEW/DemoScript";
+import Acc from "./ReactUdemy/Accordion/Acc";
+import FlashCards from "./ReactUdemy/FCards/FlashCards";
 import Pizza from "./ReactUdemy/pizza-menu/indexP";
 import FirstReactApp from "./ReactUdemy/Steps/FirstReactApp";
 import TimeCounter from "./ReactUdemy/Steps/TimeCounter";
+import TipCal from "./ReactUdemy/TipCalculator/TipCal";
 import ListApp from "./ReactUdemy/Travel/ComponentsT/ListApp";
-import FlashCards from "./ReactUdemy/FCards/FlashCards";
-import Acc from "./ReactUdemy/Accordion/Acc";
-import Fundamentals1 from "./JScript/Fundamentals1";
-import CarouselComp from "./components/CarouselComp";
+import Todos from "./Todos";
+import UsersDashboard from "./useContext Hook/UsersDashboard";
+import SplitBills from "./ReactUdemy/SplitBill/SplitBills";
 
 function App() {
 
@@ -50,6 +51,8 @@ function App() {
       // <Route path='/' element={<Navbar />} >
       <Route path="/" element={<RootLayout />}>
         <Route element={<PrivateComponent />}>
+          <Route index path="/spBill" element={<SplitBills />} />
+          <Route index path="/tipCal" element={<TipCal />} />
           <Route index path="/frstApp" element={<FirstReactApp />} />
           <Route index path="/timeCntr" element={<TimeCounter />} />
           <Route index path="/fd1" element={<Fundamentals1 />}></Route>
