@@ -90,6 +90,10 @@ const navBarData = [
         url: "/flCards",
     },
     {
+        label: "Atomic Blog",
+        url: "/atoBlog",
+    },
+    {
         label: "Accordion",
         url: "/acc",
     },
@@ -290,6 +294,12 @@ const NavBarPanel = () => {
                             <NavDropdown.Item href="pizzaProject">
                                 <Nav.Link to='pizzaProject' as={Link}>
                                     Pizza Project
+                                </Nav.Link>
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="cardcaro">
+                                <Nav.Link to='cardcaro' as={Link}>
+                                    Card Carousel
                                 </Nav.Link>
                             </NavDropdown.Item>
 

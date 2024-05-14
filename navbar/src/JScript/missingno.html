@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missing number in an array using JavaScript</title>
+  </head>
+  <body>
+    <p id="GFG_UP"></p>
+
+    <button onclick="missNoClick()">Click Here</button>
+
+    <p id="GFG_DOWN"></p>
+    <script>
+      var up = document.getElementById("GFG_UP");
+      const arr = [1, 2, 4, 5];
+      up.innerHTML = "Missing number in an array" + arr;
+
+      var down = document.getElementById("GFG_DOWN");
+
+      function findMissingNumber(arr) {
+        debugger;
+        const n = arr.length + 1;
+        const totalSum = (n * (n + 1)) / 2;
+        const arrSum = arr.reduce((acc, num) => acc + num, 0);
+        return totalSum - arrSum;
+      }
+
+      function missNoClick() {
+        down.innerHTML = "Missing number is" + findMissingNumber(arr);
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+"24-09-2018";
+2024-01-2700:00:00 -->

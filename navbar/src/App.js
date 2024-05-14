@@ -43,6 +43,8 @@ import ListApp from "./ReactUdemy/Travel/ComponentsT/ListApp";
 import Todos from "./Todos";
 import UsersDashboard from "./useContext Hook/UsersDashboard";
 import SplitBills from "./ReactUdemy/SplitBill/SplitBills";
+import CardCaro from "./MiniProjects/CardCaro";
+import AtoBlog from "./ReactUdemy/AtomicBlogs/AtoBlog";
 
 function App() {
 
@@ -52,12 +54,14 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route element={<PrivateComponent />}>
           <Route index path="/spBill" element={<SplitBills />} />
+          <Route index path="/cardcaro" element={<CardCaro />} />
           <Route index path="/tipCal" element={<TipCal />} />
           <Route index path="/frstApp" element={<FirstReactApp />} />
           <Route index path="/timeCntr" element={<TimeCounter />} />
           <Route index path="/fd1" element={<Fundamentals1 />}></Route>
           <Route index path="/listApp" element={<ListApp />} />
           <Route index path="/flCards" element={<FlashCards />} />
+          <Route index path="/atoBlog" element={<AtoBlog />} />
           <Route index path="/acc" element={<Acc />} />
           <Route index path="/about" element={<About />} />
           <Route path="/cntxt" element={<Context />} />

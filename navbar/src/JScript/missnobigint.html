@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsorted Missing number in an array</title>
+  </head>
+  <body>
+    <p id="up"></p>
+
+    <button onclick="missNoClick()">Click Here</button>
+
+    <button onclick="missNoUnSortClick()">Unsorted array</button>
+
+    <p id="ndown"></p>
+    <p id="nndown"></p>
+    <script>
+      var up = document.getElementById("up");
+      const arr = [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 14, 15];
+      const newarr = [1, 2, 3, 4, 5, 6, 9, 10, 11, 14, 15, 7];
+      up.innerHTML = "Missing number in an array" + arr;
+
+      var down = document.getElementById("ndown");
+      var nndown = document.getElementById("nndown");
+
+      function findMissingNumber(arr) {
+        debugger;
+
+        // 27/11/2023
+        // 2024-01-2700:00:00
+
+        var date = "27/11/2023";
+        // date = date.split("/").reverse().join("/");
+
+        // var date2 = "24-09-2018";
+        // date2 = date.split("-").reverse().join("-");
+
+        // console.log(date); //print "2018/09/24"
+        // console.log(date2); //print "2018-09-24"
+
+        // 27/11/2023
+        // 2024-01-2700:00:00
+
+        const dateObj = date;
+        console.log("dateObj", dateObj); // "27/11/2023"
+        const forDate = dateObj.toISOString().split("T")[0] + "00:00:00";
+        console.log("forDate", forDate);
+
+        var missno = [];
+
+        for (let i = arr[0]; i < arr[arr.length - 1]; i++) {
+          if (!arr.includes(i)) {
+            missno.push(i);
+            console.log(i, "I no");
+          }
+        }
+      }
+
+      function findUnSortedNumber(newarr) {
+        debugger;
+        const newmiss = [];
+        let nearr = newarr.sort((a, b) => a - b);
+        console.log("New unsorted", nearr);
+
+        for (let j = nearr[0]; j < nearr[nearr.length - 1]; j++) {
+          if (!nearr.includes(j)) {
+            let nnn = newmiss.push(j);
+            console.log("New sorted array", j);
+            console.log("New sorted array", nnn);
+          }
+        }
+      }
+
+      function missNoClick() {
+        down.innerHTML = "Missing number is" + findMissingNumber(arr);
+      }
+
+      function missNoUnSortClick() {
+        nndown.innerHTML =
+          "Unsorted Missing number is" + findUnSortedNumber(newarr) + nnn;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+    function missingArray() { 
+        const arr = [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 14, 15];
+        let missNo = []; 
+        for(let i = arr[0]; i < arr[arr.length -1]; i++){
+            if(!arr.includes(i)){ missNo.push(i); } 
+        } 
+            console.log("Missing No:", missNo) 
+    }
+missingArray(); -->
