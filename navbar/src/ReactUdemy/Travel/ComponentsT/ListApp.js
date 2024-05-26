@@ -45,7 +45,7 @@ function ListApp() {
                 onToggleItem={handleToggleItem}
                 onClearList={handleClearList}
             />
-            <Stats />
+            <Stats items = {items}/>
         </div>
     );
 }

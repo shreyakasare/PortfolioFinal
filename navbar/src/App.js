@@ -49,7 +49,7 @@ function App() {
     createRoutesFromElements(
       // <Route path='/' element={<Navbar />} >
       <Route path="/" element={<RootLayout />}>
-        <Route element={<PrivateComponent />}>
+        {/* <Route element={<PrivateComponent />}> */}
           <Route index path="/frstApp" element={<FirstReactApp />} />
           <Route index path="/timeCntr" element={<TimeCounter />} />
           <Route index path="/fd1" element={<Fundamentals1 />}></Route>
@@ -83,7 +83,7 @@ function App() {
           <Route path="productList" element={<ProductList />} />
           <Route path="jscript" element={<Arr />} />
 
-        </Route>
+        {/* </Route> */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/loginm" element={<LoginM />} />
       </Route>
