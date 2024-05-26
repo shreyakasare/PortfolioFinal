@@ -56,3 +56,15 @@
 .open .title {
   color: #087f5b;
 }
+
+.accordionp {
+  width: 700px;
+  margin: 140px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mh5 {
+  width: 650px;
+}

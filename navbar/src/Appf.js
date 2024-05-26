@@ -1,15 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import "./App.css";
-import Psdhml from "./Psdhml";
+import LoopsCompo from "./JScript/LoopsCompo";
 
 function App() {
-
 
   return (
     <>
       <div className="App">
-        <Psdhml />
+        <LoopsCompo />
       </div>
     </>
   );
