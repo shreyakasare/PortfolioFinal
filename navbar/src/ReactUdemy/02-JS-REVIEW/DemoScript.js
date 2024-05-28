@@ -139,7 +139,6 @@ const data = [
     },
 ];
 function getBooks() {
-    debugger
     return data;
 }
 

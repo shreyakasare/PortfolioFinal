@@ -54,8 +54,8 @@ const navBarData = [
                 url: "/react",
                 submenu: [
                     {
-                        label: "Hooks",
-                        url: "/react/hooks",
+                        label: "UsePopCorn",
+                        url: "/usePop",
                     },
                     {
                         label: "Context",
@@ -103,7 +103,6 @@ const NavBarPanel = () => {
     const cartProducts = useSelector(state => state.cart);
 
     const jscriptShow = (mItems) => {
-        debugger
         return mItems.map(
             (item, index) => {
                 if (item.submenu) {
@@ -174,7 +173,7 @@ const NavBarPanel = () => {
         <Navbar expand="lg" className="bg-body-tertiary">
             <img className='logo' src={logo} alt="logo" />
             <Container fluid>
-                <Navbar.Brand href="#">Redux Toolkit</Navbar.Brand>
+                <Navbar.Brand>Redux Toolkit</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -213,7 +212,7 @@ const NavBarPanel = () => {
                             </NavDropdown.Item>
 
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
+                            <NavDropdown.Item>
                                 Something else here
                             </NavDropdown.Item>
 
@@ -221,7 +220,7 @@ const NavBarPanel = () => {
                                 {jscriptShow(jscriptData)}
                             </NavDropdown>
 
-                            <NavDropdown.Item href="mern">
+                            <NavDropdown.Item>
                                 <Nav.Link to='mern' as={Link}>
                                     MERN
                                 </Nav.Link>
@@ -230,56 +229,56 @@ const NavBarPanel = () => {
 
                         {/* Drop down */}
                         <NavDropdown title="Json Typicode" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="posts">
+                            <NavDropdown.Item >
                                 <Nav.Link to='posts' as={Link}>
                                     Posts
                                 </Nav.Link>
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item href="prime">
+                            <NavDropdown.Item >
                                 <Nav.Link to='prime' as={Link}>
                                     Prime Number
                                 </Nav.Link>
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item href="fil">
+                            <NavDropdown.Item >
                                 <Nav.Link to='fil' as={Link}>
                                     Filter Array
                                 </Nav.Link>
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item href="tablePagination">
+                            <NavDropdown.Item >
                                 <Nav.Link to='tablePagination' as={Link}>
                                     Table Pagination
                                 </Nav.Link>
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item href="second">
+                            <NavDropdown.Item >
                                 <Nav.Link to='second' as={Link}>
                                     Accordion
                                 </Nav.Link>
                             </NavDropdown.Item>
 
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
+                            <NavDropdown.Item >
                                 Something else here
                             </NavDropdown.Item>
                         </NavDropdown>
 
                         {/* extra */}
                         <NavDropdown title="Projects" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="todos">
+                            <NavDropdown.Item >
                                 <Nav.Link to='about' as={Link}>
                                     About
                                 </Nav.Link>
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="product">
+                            <NavDropdown.Item >
                                 <Nav.Link to='product' as={Link}>
                                     Products
                                 </Nav.Link>
                             </NavDropdown.Item>
 
-                            <NavDropdown.Item href="hikeCalc">
+                            <NavDropdown.Item>
                                 <Nav.Link to='hikeCalc' as={Link}>
                                     Hike Calculator
                                 </Nav.Link>
