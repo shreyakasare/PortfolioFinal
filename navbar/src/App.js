@@ -46,6 +46,7 @@ import SplitBills from "./ReactUdemy/SplitBill/SplitBills";
 import CardCaro from "./MiniProjects/CardCaro";
 import AtoBlog from "./ReactUdemy/AtomicBlogs/AtoBlog";
 import UsePopCorn from "./ReactUdemy/UsePopcorn/UsePopCorn";
+import GuessNumber from "./JavaScriptUdemy/GuessMyNumber/GuessNumber";
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         {/* <Route element={<PrivateComponent />}> */}
         <Route index path="/spBill" element={<SplitBills />} />
+        <Route index path="/guessNum" element={<GuessNumber />} />
         <Route index path="/usePop" element={<UsePopCorn />} />
         <Route index path="/cardcaro" element={<CardCaro />} />
         <Route index path="/tipCal" element={<TipCal />} />

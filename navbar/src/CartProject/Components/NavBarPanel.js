@@ -99,6 +99,63 @@ const navBarData = [
     },
 ];
 
+const jnavBarData = [
+    {
+        label: "Guess My Number", url: "/guessNum",
+    },
+    {
+        label: "Projects",
+        submenu: [
+            {
+                label: "React",
+                url: "/react",
+                submenu: [
+                    {
+                        label: "UsePopCorn",
+                        url: "/usePop",
+                    },
+                    {
+                        label: "Context",
+                        url: "/react/context",
+                    },
+                    {
+                        label: "TipCal",
+                        url: "/tipCal",
+                    },
+                    {
+                        label: "SplitBills",
+                        url: "/spBill"
+                    }
+                ],
+            },
+            {
+                label: "JavaScript",
+                url: "/javascript",
+            },
+        ],
+    },
+    {
+        label: "Time Counter",
+        url: "/timeCntr",
+    },
+    {
+        label: "List App",
+        url: "/listApp",
+    },
+    {
+        label: "Flash Cards",
+        url: "/flCards",
+    },
+    {
+        label: "Atomic Blog",
+        url: "/atoBlog",
+    },
+    {
+        label: "Accordion",
+        url: "/acc",
+    },
+];
+
 const NavBarPanel = () => {
     const cartProducts = useSelector(state => state.cart);
 
@@ -164,6 +221,38 @@ const NavBarPanel = () => {
         );
     };
 
+    const jmenuShow = (jmItems) => {
+        return jmItems.map(
+            (item, index) => {
+                if (item.submenu) {
+                    return (
+                        <NavDropdown
+                            title={
+                                item.label
+                            }
+                            key={index}
+                            className="dropdown-menu-darkdropend"
+                        >
+                            {jmenuShow(
+                                item.submenu
+                            )}
+                        </NavDropdown>
+                    );
+                } else {
+                    return (
+                        <Nav.Link
+                            href={
+                                item.url
+                            }
+                            key={index}>
+                            {item.label}
+                        </Nav.Link>
+                    );
+                }
+            }
+        );
+    };
+
     const navStyle = {
         color: "black",
         fontWeight: "bold",
@@ -183,6 +272,10 @@ const NavBarPanel = () => {
 
                         <NavDropdown title="React Udemy" id="navbarScrollingDropdown">
                             {menuShow(navBarData)}
+                        </NavDropdown>
+
+                        <NavDropdown title="JavaScript Udemy" id="navbarScrollingDropdown">
+                            {jmenuShow(jnavBarData)}
                         </NavDropdown>
 
                         {/* Drop down */}
