@@ -56,9 +56,10 @@ function App() {
           <Route index path="/spBill" element={<SplitBills />} />
           <Route index path="/cardcaro" element={<CardCaro />} />
           <Route index path="/tipCal" element={<TipCal />} />
+          {/* <Route element={<PrivateComponent />}> */}
           <Route index path="/frstApp" element={<FirstReactApp />} />
           <Route index path="/timeCntr" element={<TimeCounter />} />
-          <Route index path="/fd1" element={<Fundamentals1 />}></Route>
+          <Route index path="/fd1" element={<Fundamentals1 />} />
           <Route index path="/listApp" element={<ListApp />} />
           <Route index path="/flCards" element={<FlashCards />} />
           <Route index path="/atoBlog" element={<AtoBlog />} />
@@ -90,9 +91,10 @@ function App() {
           <Route path="productList" element={<ProductList />} />
           <Route path="jscript" element={<Arr />} />
 
+          {/* </Route> */}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/loginm" element={<LoginM />} />
         </Route>
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/loginm" element={<LoginM />} />
       </Route>
     )
   );
