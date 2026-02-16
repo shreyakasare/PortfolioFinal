@@ -6,7 +6,7 @@ function App() {
       {/* Header Navigation */}
       <header className="header">
         <div className="container">
-          <div className="logo">Shreya</div>
+          <div className="logo">Portfolio</div>
           <nav className="nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
