@@ -68,7 +68,7 @@ function App() {
             </div>
             <div className="about-stats">
               <div className="stat">
-                <h3>3+</h3>
+                <h3>4+</h3>
                 <p>Years Experience</p>
               </div>
               <div className="stat">
