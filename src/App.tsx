@@ -56,7 +56,7 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I'm a passionate React developer with 3+ years of experience building web applications. 
+                I'm a passionate React developer with 4+ years of experience building web applications. 
                 My journey in web development started with a curiosity about how things work online, 
                 and it has evolved into a passion for creating intuitive, beautiful digital experiences.
               </p>
